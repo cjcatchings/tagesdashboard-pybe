@@ -8,7 +8,7 @@ logger = logging.Logger(__name__)
 from db.mongo import db_context
 cfg = env_config()
 mongo_client = db_context.init_mongo_client()
-MONGO_DB = config['mongoDbName']
+MONGO_DB = cfg['mongoDbName']
 
 #Import endpoint handler modules
 from auth import mongo_flask_auth
